@@ -1,0 +1,28 @@
+------Info(2020-12-13 10:52:48.0169)DESKTOP-809LIO6------
+
+                      Exception Type: |
+                      Exception Message: |
+                      Stack Trace: |
+                      Additional Info:Check user is already exist or not !
+
+------Error(2020-12-13 10:52:48.8139)DESKTOP-809LIO6------
+
+                      Exception Type: |
+                      Exception Message: |
+                      Stack Trace: |
+                      Additional Info:User mail id is already exist.
+
+------Info(2020-12-13 13:06:17.8779)DESKTOP-809LIO6------
+
+                      Exception Type: |
+                      Exception Message: |
+                      Stack Trace: |
+                      Additional Info:Check user is already exist or not !
+
+------Info(2020-12-13 13:06:23.5971)DESKTOP-809LIO6------
+
+                      Exception Type: |
+                      Exception Message: |
+                      Stack Trace: |
+                      Additional Info:User data is saved in database
+

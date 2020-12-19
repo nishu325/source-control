@@ -1,0 +1,59 @@
+﻿@model Assignment.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Login</title>
+</head>
+<body>
+   
+
+    @{ if (TempData["message"] != null)
+        {
+            <div class="alert alert-success alert-dismissible">
+                <a href="/Auth/Login" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                @TempData["message"]
+            </div>
+        }
+    }
+
+
+    <div class="row justify-content-center mx-4 mt-4">
+        <div class="col-12 col-sm-6 col-md-3">
+            @using (Html.BeginForm("Login", "Auth", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()<!--This is used for website security-->
+                <div>
+                    <p><b>Login</b></p>
+                    <hr style="border:groove" />
+                </div>
+
+                <div class="form-group justify-center-content">
+                    <!--Email-id input from User-->
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Email" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "badge badge-danger" })
+                </div>
+                <!--Password input from User-->
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "badge badge-danger" })
+
+                </div>
+                <!--Login button-->
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            }
+        </div>
+    </div>
+</body>
+</html>
